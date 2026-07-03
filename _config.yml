@@ -1,0 +1,11 @@
+title: PaMeiOS
+description: Unity3D/VR/AR Game Creator Portfolio
+baseurl: ""
+url: "https://pamei090908.github.io"
+
+markdown: kramdown
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
