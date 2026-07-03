@@ -279,7 +279,7 @@ PLATFORMS
   x64-mingw-ucrt
 
 DEPENDENCIES
-  github-pages (= 232)
+  github-pages
   webrick (~> 1.8)
 
 CHECKSUMS
