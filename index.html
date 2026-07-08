@@ -120,7 +120,7 @@ title: MeiSter-WorkShop
       </section>
 
       <section class="bio-bento-grid" aria-label="Bio cards">
-        <a class="bento-card bio-image-card reveal-card" href="#demo-maple-kitchen" aria-label="Go to Maple Idle Kitchen demo card">
+        <a class="bento-card bio-image-card reveal-card" href="#demo-maple-kitchen" data-featured-demo-open="maple-kitchen" aria-label="Go to Maple Idle Kitchen demo card">
           <img src="{{ '/assets/images/demo-maple-idle-kitchen.jpg' | relative_url }}" alt="Maple Idle Kitchen world preview">
           <div class="bio-image-caption">
             <p class="eyebrow">FEATURED WORLD</p>
@@ -132,9 +132,9 @@ title: MeiSter-WorkShop
           <p class="eyebrow">PROJECTS</p>
           <h3>參與過的內容</h3>
           <ul class="project-list">
-            <li>VRChat 世界設計與互動系統</li>
-            <li>同人向楓之谷 VRChat 版本系列</li>
-            <li>Avatar、場景與可愛風格 3D 展示</li>
+            <li>Unity Game Prototypes Develop</li>
+            <li>VRChat World/Avatar Creator</li>
+            <li>3D Models/Animation</li>
           </ul>
         </article>
       </section>
@@ -145,7 +145,7 @@ title: MeiSter-WorkShop
             <p class="eyebrow">UNITY TECH PANELS</p>
             <h2 id="techPanelTitle">Technical Showcase</h2>
             <p class="section-note">
-              以技術實作、世界創作紀錄與角色模型委託為主，整理 Unity / VRChat 專案中實際累積的製作經驗。
+              以技術實作、世界創作紀錄與角色模型委託為主。
             </p>
           </div>
 
@@ -160,7 +160,7 @@ title: MeiSter-WorkShop
             <article class="tech-panel text-tech-panel">
               <span class="panel-index">01</span>
               <h3>Prototype Gameplay</h3>
-              <p>將玩法概念快速整理成可測試的 Unity 原型，驗證互動節奏、任務流程、玩家回饋與可擴充性。</p>
+              <p>將玩法概念快速整理成可測試的 Unity 原型，驗證互動節奏、遊戲流程、玩家回饋與可擴充性。</p>
             </article>
             <article class="tech-panel text-tech-panel">
               <span class="panel-index">02</span>
@@ -169,16 +169,16 @@ title: MeiSter-WorkShop
             </article>
             <article class="tech-panel text-tech-panel">
               <span class="panel-index">03</span>
-              <h3>Animation</h3>
-              <p>處理角色動作、UI 動畫與互動回饋，讓玩家能清楚理解狀態變化並感受到操作手感。</p>
+              <h3>Post Processing</h3>
+              <p>透過 Bloom、Color Grading、環境光與鏡頭氛圍調整，建立不同氛圍的場景打造。</p>
             </article>
           </div>
 
           <div class="panel-page" data-panel-page="1" aria-hidden="true">
             <article class="tech-panel text-tech-panel">
               <span class="panel-index">04</span>
-              <h3>Post Processing</h3>
-              <p>透過 Bloom、Color Grading、環境光與鏡頭氛圍調整，建立藍粉霓虹與可愛 cyberpunk 的視覺記憶點。</p>
+              <h3>Animation</h3>
+              <p>處理角色動作、UI 動畫與互動回饋，讓玩家能清楚理解狀態變化並感受到操作手感。</p>
             </article>
             <article class="tech-panel text-tech-panel">
               <span class="panel-index">05</span>
@@ -187,7 +187,7 @@ title: MeiSter-WorkShop
             </article>
             <article class="tech-panel text-tech-panel">
               <span class="panel-index">06</span>
-              <h3>Avatar (VRC / VRM)</h3>
+              <h3>Avatar<br><span>(VRC / VRM)</span></h3>
               <p>整理 VRC / VRM 角色展示、材質調整與模型設定經驗，作為角色作品與委託展示的基礎。</p>
             </article>
           </div>
@@ -201,36 +201,32 @@ title: MeiSter-WorkShop
         <div class="creative-feature-grid" aria-label="Creative works highlights">
           <article class="avatar-feature-panel" aria-labelledby="avatarFeatureTitle">
             <button class="avatar-feature-media" type="button" data-demo-open="avatar-commission" aria-label="Open Avatar commission details">
-              <img class="avatar-feature-slide is-active" src="{{ '/assets/images/Avatar_Preview/VRChat_2026-03-09_20-01-19.510_3840x2160.png' | relative_url }}" alt="Avatar commission cover">
-              <img class="avatar-feature-slide" src="{{ '/assets/images/Avatar_Preview/VRChat_2026-07-07_18-57-32.646_3840x2160.png' | relative_url }}" alt="Avatar commission showcase 1">
-              <img class="avatar-feature-slide" src="{{ '/assets/images/Avatar_Preview/VRChat_2026-07-07_19-00-05.619_3840x2160.png' | relative_url }}" alt="Avatar commission showcase 2">
-              <img class="avatar-feature-slide" src="{{ '/assets/images/Avatar_Preview/VRChat_2026-07-07_19-04-10.170_3840x2160.png' | relative_url }}" alt="Avatar commission showcase 3">
-              <img class="avatar-feature-slide" src="{{ '/assets/images/Avatar_Preview/VRChat_2026-07-07_19-11-00.978_3840x2160.png' | relative_url }}" alt="Avatar commission showcase 4">
+              <img class="avatar-feature-icon" src="{{ '/assets/images/Avatar_Preview/VRChat_2026-03-09_20-01-19.510_3840x2160.png' | relative_url }}" alt="Avatar commission cover icon">
             </button>
             <div class="avatar-feature-copy">
               <p class="eyebrow">AVATAR COMMISSION</p>
               <h3 id="avatarFeatureTitle">Avatar 改模 / 自訂義身型 / 角色 3D 模型</h3>
               <p>接取 Avatar 改模與進階角色模型委託，主打可愛、甜點色、量產系與地雷系風格。點擊輪播圖可查看完整作品說明。</p>
               <div class="avatar-style-tags" aria-label="Avatar styles">
-                <span>可愛</span>
-                <span>甜點色</span>
-                <span>量產系</span>
-                <span>地雷系</span>
+                <span>Cute</span>
+                <span>Pastel Sweets</span>
+                <span>Mass-Produced Style</span>
+                <span>Jirai Kei</span>
               </div>
             </div>
           </article>
 
           <article class="ntut-feature-panel" aria-labelledby="ntutFeatureTitle">
+            <button class="ntut-feature-media" type="button" data-demo-open="ntut-exhibition" aria-label="Open NTUT IXD exhibition details">
+              <img class="ntut-feature-slide is-active" src="{{ '/assets/images/US_Preview/IXD1.jpg' | relative_url }}" alt="NTUT IXD virtual exhibition preview 1">
+              <img class="ntut-feature-slide" src="{{ '/assets/images/US_Preview/IXD2.jpg' | relative_url }}" alt="NTUT IXD virtual exhibition preview 2">
+              <img class="ntut-feature-slide" src="{{ '/assets/images/US_Preview/IXD3.jpg' | relative_url }}" alt="NTUT IXD virtual exhibition preview 3">
+              <img class="ntut-feature-slide" src="{{ '/assets/images/US_Preview/IXD4.jpg' | relative_url }}" alt="NTUT IXD virtual exhibition preview 4">
+            </button>
             <div class="ntut-feature-copy">
               <p class="eyebrow">VIRTUAL EXHIBITION</p>
               <h3 id="ntutFeatureTitle">NTUT_IXD Virtual Exhibition</h3>
-              <p>畢業製作虛擬展場創作紀錄，整理展覽空間、作品展示動線與線上觀展體驗，和 MSV 系列分開作為獨立作品介紹。</p>
-            </div>
-            <div class="ntut-media-grid">
-              <a class="ntut-thumb" href="https://www.youtube.com/watch?v=8UopvzuZT6o" target="_blank" rel="noopener noreferrer" aria-label="Open NTUT IXD video on YouTube">
-                <img src="{{ '/assets/images/US_Preview/IXD1.jpg' | relative_url }}" alt="NTUT IXD virtual exhibition thumbnail">
-              </a>
-              <iframe src="https://www.youtube.com/embed/8UopvzuZT6o" title="NTUT IXD virtual exhibition preview" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+              <p>畢業製作虛擬展場創作紀錄，整理展覽空間、作品展示動線與線上觀展體驗。點擊輪播圖可開啟影片與詳細資訊。</p>
             </div>
           </article>
         </div>
@@ -241,7 +237,7 @@ title: MeiSter-WorkShop
           <p class="eyebrow">GAME DEMO SHOWCASE</p>
           <h2>MSV Series VRChat Worlds / Demo Clips</h2>
           <p class="section-note">
-            預設只顯示縮圖與標題。按下 Show More 後會開啟詳細視窗，之後可放系統說明、影片連結與 GIF 展示。
+            精選 MSV 系列 VRChat 世界展示，點擊 Show More 查看影片、系統介紹與世界數據。
           </p>
         </div>
 
@@ -252,6 +248,10 @@ title: MeiSter-WorkShop
             </button>
             <div class="demo-compact-body">
               <h3>Maple Idle Kitchen</h3>
+              <div class="demo-stat-row" aria-label="Maple Idle Kitchen world stats">
+                <span><i class="demo-stat-icon demo-stat-visits" aria-hidden="true"></i>180k Visits</span>
+                <span><i class="demo-stat-icon demo-stat-likes" aria-hidden="true"></i>7.5k Likes</span>
+              </div>
               <button class="show-more-button" type="button" data-demo-open="maple-kitchen">Show More</button>
             </div>
           </article>
@@ -261,7 +261,11 @@ title: MeiSter-WorkShop
               <img src="{{ '/assets/images/demo-cross-party.jpg' | relative_url }}" alt="MapleStory in VRChat Cross Party preview">
             </button>
             <div class="demo-compact-body">
-              <h3>MapleStory in VRChat - Cross Party</h3>
+              <h3>MapleStory in VRChat Cross Party</h3>
+              <div class="demo-stat-row" aria-label="Cross Party world stats">
+                <span><i class="demo-stat-icon demo-stat-visits" aria-hidden="true"></i>30k Visits</span>
+                <span><i class="demo-stat-icon demo-stat-likes" aria-hidden="true"></i>2.7k Likes</span>
+              </div>
               <button class="show-more-button" type="button" data-demo-open="cross-party">Show More</button>
             </div>
           </article>
@@ -272,6 +276,10 @@ title: MeiSter-WorkShop
             </button>
             <div class="demo-compact-body">
               <h3>MapleStory in VRChat Exploration</h3>
+              <div class="demo-stat-row" aria-label="Exploration world stats">
+                <span><i class="demo-stat-icon demo-stat-visits" aria-hidden="true"></i>29k Visits</span>
+                <span><i class="demo-stat-icon demo-stat-likes" aria-hidden="true"></i>3.5k Likes</span>
+              </div>
               <button class="show-more-button" type="button" data-demo-open="exploration">Show More</button>
             </div>
           </article>

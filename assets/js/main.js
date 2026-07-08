@@ -173,16 +173,20 @@ techSection?.addEventListener("mouseleave", startPanelAutoPlay);
 showPanelPage(0);
 startPanelAutoPlay();
 
-const avatarFeatureSlides = Array.from(document.querySelectorAll(".avatar-feature-slide"));
-let activeAvatarFeatureIndex = 0;
+const setupLoopingSlides = (selector, interval = 3000) => {
+  const slides = Array.from(document.querySelectorAll(selector));
+  let activeIndex = 0;
 
-if (avatarFeatureSlides.length > 1) {
+  if (slides.length <= 1) return;
+
   window.setInterval(() => {
-    avatarFeatureSlides[activeAvatarFeatureIndex]?.classList.remove("is-active");
-    activeAvatarFeatureIndex = (activeAvatarFeatureIndex + 1) % avatarFeatureSlides.length;
-    avatarFeatureSlides[activeAvatarFeatureIndex]?.classList.add("is-active");
-  }, 3000);
-}
+    slides[activeIndex]?.classList.remove("is-active");
+    activeIndex = (activeIndex + 1) % slides.length;
+    slides[activeIndex]?.classList.add("is-active");
+  }, interval);
+};
+
+setupLoopingSlides(".ntut-feature-slide", 3200);
 
 const demoDetails = {
   "maple-kitchen": {
@@ -208,7 +212,8 @@ const demoDetails = {
     systems: [
       "Idle Cooking Loop：以素材收集、料理製作與角色成長形成輕鬆可重複遊玩的循環。",
       "Monster & Ingredient Flow：透過狩獵怪物取得食材，將戰鬥與料理系統自然串接。",
-      "Social Airship Space：以飛行船作為休閒據點，讓玩家可以掛機、料理、聊天與展示成果。"
+      "World Records：2026/6 發行後累計 180k Visits / 7.5k Likes，持續增長中。",
+      "Ranking：VRChat 世界 2026/6 月底 Popular 第一名。"
     ],
     actions: [
       { label: "World Link", href: "https://vrchat.com/home/world/wrld_0e9eef0b-f261-45c8-8225-9c9880c5dbbd/info" }
@@ -216,17 +221,18 @@ const demoDetails = {
   },
   "cross-party": {
     kicker: "GAMEPLAY DEMO / PARTY WORLD",
-    title: "MapleStory in VRChat - Cross Party",
+    title: "MapleStory in VRChat Cross Party",
     media: {
       type: "youtube",
       embedUrl: "https://www.youtube.com/embed/zz4pvjd8z8s",
-      title: "MapleStory in VRChat - Cross Party demo video"
+      title: "MapleStory in VRChat Cross Party demo video"
     },
     description: "受 MapleStory 啟發的粉絲製多人動作 RPG，也是 MapleStory-in-VRChat project 的第二部作品。MSV Cross Party 專為合作與組隊玩法打造，玩家可以組隊挑戰關卡、擊敗 Boss，並體驗圍繞多人協作與共享成長設計的副本內容。",
     systems: [
       "Co-op Stage Flow：以隊伍推進、關卡清除與戰鬥節奏為核心，強化多人共同攻略的感覺。",
       "Boss & Dungeon Content：設計 Boss 戰與副本流程，讓玩家需要協作、分工與共享目標。",
-      "Shared Progression：將角色成長與隊伍體驗結合，讓每次挑戰都能累積遊玩成果。"
+      "World Records：2025/12 發行後累計 30k Visits / 2.7k Likes。",
+      "Release Record：釋出時進入 VRChat 世界 Popular 排名前段。"
     ],
     actions: [
       { label: "Watch Demo", href: "https://www.youtube.com/watch?v=zz4pvjd8z8s" },
@@ -245,7 +251,8 @@ const demoDetails = {
     systems: [
       "Local Gameplay Systems：玩法邏輯以本地端運作，讓單人探索與練習更穩定順暢。",
       "VR / PC Compatibility：同時支援 VR 與 PC 模式，兼顧沉浸操作與桌面遊玩。",
-      "Exploration & Growth：以探索路線、戰鬥練習與角色成長作為主要遊玩目標。"
+      "World Records：2025/1 發行後累計 29k Visits / 3.5k Likes。",
+      "Release Record：釋出時進入 VRChat 世界 Popular 排名前段。"
     ],
     actions: [
       { label: "Watch Demo", href: "https://www.youtube.com/watch?v=Khcf9dyn0eM" },
@@ -267,14 +274,32 @@ const demoDetails = {
     },
     description: "接取 Avatar 改模、自訂義身型與進階角色 3D 模型委託，協助整理角色外觀、材質色調、配件搭配與整體風格呈現。",
     systems: [
-      "委託方向：Avatar 改模、自訂義身型、進階角色 3D 模型製作與展示整理。",
-      "擅長風格：可愛、甜點色、量產系、地雷系，偏向柔和但有記憶點的角色設計。",
-      "歷史模型修改經驗：Karin / Chiffon / Plum / Sio / Kipfel / Siska / Ririka。"
+      "Commission：Avatar 改模、自訂義身型、進階角色 3D 模型製作與展示整理。",
+      "Style Tags：Cute / Pastel Sweets / Mass-Produced Style / Jirai Kei。",
+      "Model Editing Experience：Karin / Chiffon / Plum / Sio / Kipfel / Siska / Ririka。"
     ],
     actions: []
+  },
+  "ntut-exhibition": {
+    kicker: "VIRTUAL EXHIBITION / WORLD RECORD",
+    title: "NTUT_IXD Virtual Exhibition",
+    media: {
+      type: "youtube",
+      embedUrl: "https://www.youtube.com/embed/8UopvzuZT6o",
+      title: "NTUT IXD virtual exhibition preview video"
+    },
+    description: "畢業製作虛擬展場創作紀錄，將實體展覽的空間感、作品展示動線與線上觀展體驗整理成可瀏覽的虛擬展場。",
+    systems: [
+      "Exhibition Flow：規劃線上展覽動線，讓觀展者能依序瀏覽作品與展區內容。",
+      "World Presentation：以 VRChat 世界形式呈現展場空間、作品區塊與觀展節奏。",
+      "Record Note：作為台北科技大學互動設計系畢業製作虛擬展場的世界創作紀錄。"
+    ],
+    actions: [
+      { label: "Watch Video", href: "https://www.youtube.com/watch?v=8UopvzuZT6o" },
+      { label: "World Link", href: "https://vrchat.com/home/world/wrld_f926447a-ef68-4f52-823d-b01fb2cfe3d3/info" },
+    ]
   }
 };
-
 const demoModal = document.querySelector("[data-demo-modal]");
 const demoModalMedia = document.querySelector("[data-demo-modal-media]");
 const demoModalKicker = document.querySelector("[data-demo-modal-kicker]");
@@ -395,6 +420,18 @@ document.querySelectorAll("[data-demo-open]").forEach((button) => {
     openDemoModal(button.dataset.demoOpen, button);
   });
 });
+
+document.querySelectorAll("[data-featured-demo-open]").forEach((link) => {
+  link.addEventListener("click", (event) => {
+    event.preventDefault();
+    const demoId = link.dataset.featuredDemoOpen;
+    const target = document.querySelector(link.getAttribute("href"));
+
+    target?.scrollIntoView({ behavior: "smooth", block: "center" });
+    window.setTimeout(() => openDemoModal(demoId, link), 420);
+  });
+});
+
 
 document.querySelectorAll("[data-demo-close]").forEach((button) => {
   button.addEventListener("click", closeDemoModal);
