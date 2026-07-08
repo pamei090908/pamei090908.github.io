@@ -739,10 +739,7 @@ body.light-mode .theme-icon-moon {
   content: "";
   position: absolute;
   inset: 0;
-  background:
-    linear-gradient(180deg, transparent 60%, rgba(8, 11, 24, 0.35)),
-    linear-gradient(90deg, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
-  background-size: auto, 18px 18px;
+  background: linear-gradient(180deg, transparent 70%, rgba(8, 11, 24, 0.22));
   pointer-events: none;
 }
 
@@ -819,21 +816,21 @@ body.light-mode .theme-icon-moon {
 }
 
 .tech-text-pages {
-  height: 246px;
+  height: 430px;
 }
 
 .text-tech-panel {
-  grid-template-rows: auto minmax(0, 1fr);
+  grid-template-rows: 138px auto minmax(0, 1fr);
   min-height: 0;
 }
 
 .text-tech-panel .panel-index,
 .text-tech-panel h3 {
-  grid-row: 1;
+  grid-row: 2;
 }
 
 .text-tech-panel p {
-  grid-row: 2;
+  grid-row: 3;
 }
 
 .panel-dots {
@@ -1567,7 +1564,7 @@ body.modal-lock {
   }
 
   .tech-text-pages {
-    height: 700px;
+    height: 1080px;
   }
 
   .avatar-feature-panel {
@@ -1630,7 +1627,7 @@ body.modal-lock {
   }
 
   .tech-text-pages {
-    height: 780px;
+    height: 1160px;
   }
 
   .avatar-feature-copy,
