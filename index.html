@@ -1,6 +1,6 @@
 ---
 layout: none
-title: PaMeiOS
+title: MeiSter-WorkShop
 ---
 
 <!DOCTYPE html>
@@ -11,122 +11,290 @@ title: PaMeiOS
 
   <title>{{ site.title }}</title>
   <meta name="description" content="{{ site.description }}" />
+  <meta property="og:title" content="{{ site.title }}" />
+  <meta property="og:description" content="{{ site.description }}" />
+  <meta property="og:image" content="{{ '/assets/images/logo_v1.png' | absolute_url }}" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="{{ site.title }}" />
+  <meta name="twitter:description" content="{{ site.description }}" />
+  <meta name="twitter:image" content="{{ '/assets/images/logo_v1.png' | absolute_url }}" />
 
-  <link rel="stylesheet" href="/assets/css/style.css" />
+  <link rel="icon" type="image/png" href="{{ '/assets/images/logo_v1.png' | relative_url }}" />
+  <link rel="apple-touch-icon" href="{{ '/assets/images/logo_v1.png' | relative_url }}" />
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}" />
 </head>
 
 <body>
+  <div class="loading-screen" data-loading-screen aria-live="polite" aria-label="Loading MeiSter-WorkShop">
+    <div class="loading-grid" aria-hidden="true"></div>
+    <div class="loading-card">
+      <div class="loading-orbit" aria-hidden="true">
+        <img src="{{ '/assets/images/loading-icon.gif' | relative_url }}" alt="">
+      </div>
+      <p class="loading-kicker">MeiSter-WorkShop boot sequence</p>
+      <h2>Loading creator world...</h2>
+      <div class="loading-status-row">
+        <span data-loading-status>Initializing Unity modules</span>
+        <strong data-loading-percent>0%</strong>
+      </div>
+      <div class="loading-bar" aria-hidden="true">
+        <span data-loading-bar></span>
+      </div>
+    </div>
+  </div>
+
   <div class="page-bg"></div>
 
   <main class="site-shell">
     <aside class="profile-panel">
       <div class="avatar-frame">
-        <div class="avatar-placeholder">PM</div>
+        <img class="avatar-image" src="{{ '/assets/images/logo_v1.png' | relative_url }}" alt="PaMei logo">
       </div>
 
       <p class="eyebrow">STATUS: ONLINE</p>
       <h1>PaMei</h1>
-      <h2>Game World Creator / VRChat Developer</h2>
+      <h2>Unity Game Developer / VRChat World / Avatar Creator</h2>
+
+      <div class="tag-list profile-tags">
+        <span>Dev</span>
+        <span>C#</span>
+        <span>Unity3D</span>
+        <span>Blender</span>
+        <span>Photoshop</span>
+        <span>Codex</span>
+      </div>
 
       <p class="profile-text">
-        我專注於製作具有遊戲性、互動性與可愛風格的虛擬世界體驗。
-        主要創作方向包含 VRChat 世界、UdonSharp 遊戲系統、
-        MapleStory-inspired 玩法設計與社群活動內容。
+        擅長製作具有遊戲／互動性的可愛風格虛擬世界體驗。
+        主要創作方向為 3D 遊戲、Prototype 玩法製作，
+        同時接受創作相關世界／角色委託。
+        <br>
+        現有經營同人向楓之谷的 VRChat 版本系列遊戲世界，持續維護中。
       </p>
 
-      <div class="tag-list">
-        <span>VRChat</span>
-        <span>Unity</span>
-        <span>UdonSharp</span>
-        <span>Game Design</span>
+      <div class="social-links social-apps">
+        <a href="https://discord.com/users/pamei090908" target="_blank" rel="noopener noreferrer">
+          <svg class="app-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M20.3 4.4A17.4 17.4 0 0 0 16 3.1l-.2.4a15.6 15.6 0 0 1 3.8 1.9A12.6 12.6 0 0 0 12 3a12.6 12.6 0 0 0-7.6 2.4 15.6 15.6 0 0 1 3.8-1.9L8 3.1a17.4 17.4 0 0 0-4.3 1.3C1 8.5.3 12.5.6 16.4A17.5 17.5 0 0 0 5.9 19l.7-.9a11.5 11.5 0 0 1-1.7-.8l.4-.3A12.5 12.5 0 0 0 12 18.8a12.5 12.5 0 0 0 6.7-1.8l.4.3a11.5 11.5 0 0 1-1.7.8l.7.9a17.5 17.5 0 0 0 5.3-2.6c.4-4.5-.7-8.4-3.1-12ZM8.3 14.1c-1 0-1.8-.9-1.8-2s.8-2 1.8-2 1.8.9 1.8 2-.8 2-1.8 2Zm7.4 0c-1 0-1.8-.9-1.8-2s.8-2 1.8-2 1.8.9 1.8 2-.8 2-1.8 2Z"/>
+          </svg>
+          <span>pamei090908</span>
+        </a>
+
+        <a href="https://x.com/pa_mei090908" target="_blank" rel="noopener noreferrer">
+          <svg class="app-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M18.9 2H22l-6.8 7.8L23.2 22h-6.3l-4.9-7.4L6.3 22H3.2l7.3-8.4L2.8 2h6.4l4.4 6.7L18.9 2Zm-1.1 17.8h1.7L8.3 4.1H6.5l11.3 15.7Z"/>
+          </svg>
+          <span>X</span>
+        </a>
       </div>
 
-      <div class="social-links">
-        <a href="#" target="_blank">GitHub</a>
-        <a href="#" target="_blank">Discord</a>
-        <a href="#" target="_blank">Contact</a>
-      </div>
-
-      <button id="themeToggle" class="theme-toggle">
-        Toggle Theme
+      <button id="themeToggle" class="theme-toggle" type="button" aria-label="Switch theme" title="Switch theme">
+        <svg class="theme-icon theme-icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M21 14.7A8.5 8.5 0 0 1 9.3 3a7.5 7.5 0 1 0 11.7 11.7Z"/>
+        </svg>
+        <svg class="theme-icon theme-icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 5.2a1 1 0 0 1-1-1V2.5a1 1 0 1 1 2 0v1.7a1 1 0 0 1-1 1Zm0 17.3a1 1 0 0 1-1-1v-1.7a1 1 0 1 1 2 0v1.7a1 1 0 0 1-1 1Zm9.5-9.5h-1.7a1 1 0 1 1 0-2h1.7a1 1 0 1 1 0 2ZM4.2 13H2.5a1 1 0 1 1 0-2h1.7a1 1 0 1 1 0 2Zm13.1-5.9a1 1 0 0 1-.7-1.7l1.2-1.2a1 1 0 0 1 1.4 1.4L18 6.8a1 1 0 0 1-.7.3ZM5.5 18.9a1 1 0 0 1-.7-1.7L6 16a1 1 0 1 1 1.4 1.4l-1.2 1.2a1 1 0 0 1-.7.3Zm12.9 0a1 1 0 0 1-.7-.3l-1.2-1.2a1 1 0 1 1 1.4-1.4l1.2 1.2a1 1 0 0 1-.7 1.7ZM6.7 7.1a1 1 0 0 1-.7-.3L4.8 5.6a1 1 0 0 1 1.4-1.4l1.2 1.2a1 1 0 0 1-.7 1.7ZM12 8a4 4 0 1 0 0 8 4 4 0 0 0 0-8Z"/>
+        </svg>
       </button>
     </aside>
 
     <section class="content-panel">
-      <section class="hero-card bento-card large">
-        <p class="eyebrow">CREATOR HUB</p>
-        <h2>Building cute, chaotic, and interactive game worlds.</h2>
-        <p>
-          打造可愛、混亂、又充滿互動感的遊戲世界。
-        </p>
-      </section>
-
-      <section class="bento-grid">
-        <article class="bento-card">
-          <p class="eyebrow">CURRENT PROJECT</p>
-          <h3>Maple Idle Kitchen</h3>
+      <section class="creator-skill-panel bento-card reveal-card">
+        <div class="creator-copy">
+          <p class="eyebrow">CREATOR HUB / MAIN SKILL</p>
+          <h2>Building cute, chaotic, and interactive game worlds.</h2>
           <p>
-            一個融合料理、角色成長、怪物素材、多人互動與休閒社群體驗的 VRChat 遊戲世界。
+            打造可愛、混亂、又充滿互動感的遊戲世界。以 Unity3D 為主要開發工具，擅長製作互動式遊戲系統、
+            VRChat 世界內容、原型玩法、UI 流程與玩家體驗設計。
           </p>
-        </article>
-
-        <article class="bento-card">
-          <p class="eyebrow">SKILLS</p>
-          <h3>Unity / UdonSharp</h3>
-          <p>
-            VRChat 世界互動、遊戲系統、UI、同步邏輯、玩家資料與多人玩法設計。
-          </p>
-        </article>
-
-        <article class="bento-card">
-          <p class="eyebrow">STYLE</p>
-          <h3>Cute Cyberpunk</h3>
-          <p>
-            藍粉霓虹、玻璃感 UI、可愛角色風格、遊戲介面感與 Maple fantasy 元素。
-          </p>
-        </article>
-
-        <article class="bento-card">
-          <p class="eyebrow">PROJECT LINKS</p>
-          <h3>Worlds / Demo / Community</h3>
-          <p>
-            這裡之後可以放 VRChat 世界連結、Discord、遊戲 Demo、GitHub 專案。
-          </p>
-        </article>
-      </section>
-
-      <section class="demo-section">
-        <div class="section-heading">
-          <p class="eyebrow">DEMO ARCHIVE</p>
-          <h2>Game Demo Showcase</h2>
         </div>
 
-        <div class="demo-grid">
-          <article class="demo-card">
-            <div class="demo-preview">Demo Preview</div>
-            <h3>Cooking System Demo</h3>
-            <p>料理製作、星級、材料交換與 UI 展示。</p>
-            <a href="#" target="_blank">Watch Demo</a>
+        <div class="skill-chip-list creator-tags">
+          <span>Game Prototype</span>
+          <span>VR/AR</span>
+          <span>APP</span>
+          <span>3D Models/Animation</span>
+          <span>VRC Worlds/Avatars</span>
+        </div>
+      </section>
+
+      <section class="bio-bento-grid" aria-label="Bio cards">
+        <a class="bento-card bio-image-card reveal-card" href="#demo-maple-kitchen" aria-label="Go to Maple Idle Kitchen demo card">
+          <img src="{{ '/assets/images/demo-maple-idle-kitchen.jpg' | relative_url }}" alt="Maple Idle Kitchen world preview">
+          <div class="bio-image-caption">
+            <p class="eyebrow">FEATURED WORLD</p>
+            <h3>Maple Idle Kitchen</h3>
+          </div>
+        </a>
+
+        <article class="bento-card bio-project-card reveal-card">
+          <p class="eyebrow">PROJECTS</p>
+          <h3>參與過的內容</h3>
+          <ul class="project-list">
+            <li>VRChat 世界設計與互動系統</li>
+            <li>同人向楓之谷 VRChat 版本系列</li>
+            <li>Avatar、場景與可愛風格 3D 展示</li>
+          </ul>
+        </article>
+      </section>
+
+      <section class="tech-section bento-card reveal-card" aria-labelledby="techPanelTitle">
+        <div class="tech-header">
+          <div>
+            <p class="eyebrow">UNITY TECH PANELS</p>
+            <h2 id="techPanelTitle">Technical Showcase</h2>
+            <p class="section-note">
+              以技術實作、世界創作紀錄與角色模型委託為主，整理 Unity / VRChat 專案中實際累積的製作經驗。
+            </p>
+          </div>
+
+          <div class="panel-controls" aria-label="Panel controls">
+            <button class="panel-arrow" type="button" data-panel-prev aria-label="Previous panel">‹</button>
+            <button class="panel-arrow" type="button" data-panel-next aria-label="Next panel">›</button>
+          </div>
+        </div>
+
+        <div class="panel-pages tech-text-pages" data-panel-pages>
+          <div class="panel-page is-active" data-panel-page="0">
+            <article class="tech-panel text-tech-panel">
+              <span class="panel-index">01</span>
+              <h3>Prototype Gameplay</h3>
+              <p>將玩法概念快速整理成可測試的 Unity 原型，驗證互動節奏、任務流程、玩家回饋與可擴充性。</p>
+            </article>
+            <article class="tech-panel text-tech-panel">
+              <span class="panel-index">02</span>
+              <h3>Blender Modeling</h3>
+              <p>製作場景小物、角色配件與可匯入 Unity / VRChat 的輕量素材，兼顧風格一致性與效能。</p>
+            </article>
+            <article class="tech-panel text-tech-panel">
+              <span class="panel-index">03</span>
+              <h3>Animation</h3>
+              <p>處理角色動作、UI 動畫與互動回饋，讓玩家能清楚理解狀態變化並感受到操作手感。</p>
+            </article>
+          </div>
+
+          <div class="panel-page" data-panel-page="1" aria-hidden="true">
+            <article class="tech-panel text-tech-panel">
+              <span class="panel-index">04</span>
+              <h3>Post Processing</h3>
+              <p>透過 Bloom、Color Grading、環境光與鏡頭氛圍調整，建立藍粉霓虹與可愛 cyberpunk 的視覺記憶點。</p>
+            </article>
+            <article class="tech-panel text-tech-panel">
+              <span class="panel-index">05</span>
+              <h3>VRChat Worlds</h3>
+              <p>設計 VRChat 世界中的互動系統、多人同步、場景動線與社群停留空間，兼顧遊玩與交流。</p>
+            </article>
+            <article class="tech-panel text-tech-panel">
+              <span class="panel-index">06</span>
+              <h3>Avatar (VRC / VRM)</h3>
+              <p>整理 VRC / VRM 角色展示、材質調整與模型設定經驗，作為角色作品與委託展示的基礎。</p>
+            </article>
+          </div>
+        </div>
+
+        <div class="panel-dots" role="tablist" aria-label="Technical panel pages">
+          <button class="panel-dot is-active" type="button" data-panel-dot="0" aria-label="Show panel page 1"></button>
+          <button class="panel-dot" type="button" data-panel-dot="1" aria-label="Show panel page 2"></button>
+        </div>
+
+        <div class="creative-feature-grid" aria-label="Creative works highlights">
+          <article class="avatar-feature-panel" aria-labelledby="avatarFeatureTitle">
+            <button class="avatar-feature-media" type="button" data-demo-open="avatar-commission" aria-label="Open Avatar commission details">
+              <img class="avatar-feature-slide is-active" src="{{ '/assets/images/Avatar_Preview/VRChat_2026-03-09_20-01-19.510_3840x2160.png' | relative_url }}" alt="Avatar commission cover">
+              <img class="avatar-feature-slide" src="{{ '/assets/images/Avatar_Preview/VRChat_2026-07-07_18-57-32.646_3840x2160.png' | relative_url }}" alt="Avatar commission showcase 1">
+              <img class="avatar-feature-slide" src="{{ '/assets/images/Avatar_Preview/VRChat_2026-07-07_19-00-05.619_3840x2160.png' | relative_url }}" alt="Avatar commission showcase 2">
+              <img class="avatar-feature-slide" src="{{ '/assets/images/Avatar_Preview/VRChat_2026-07-07_19-04-10.170_3840x2160.png' | relative_url }}" alt="Avatar commission showcase 3">
+              <img class="avatar-feature-slide" src="{{ '/assets/images/Avatar_Preview/VRChat_2026-07-07_19-11-00.978_3840x2160.png' | relative_url }}" alt="Avatar commission showcase 4">
+            </button>
+            <div class="avatar-feature-copy">
+              <p class="eyebrow">AVATAR COMMISSION</p>
+              <h3 id="avatarFeatureTitle">Avatar 改模 / 自訂義身型 / 角色 3D 模型</h3>
+              <p>接取 Avatar 改模與進階角色模型委託，主打可愛、甜點色、量產系與地雷系風格。點擊輪播圖可查看完整作品說明。</p>
+              <div class="avatar-style-tags" aria-label="Avatar styles">
+                <span>可愛</span>
+                <span>甜點色</span>
+                <span>量產系</span>
+                <span>地雷系</span>
+              </div>
+            </div>
           </article>
 
-          <article class="demo-card">
-            <div class="demo-preview">Gif / WebM</div>
-            <h3>Pet Feeding UI</h3>
-            <p>寵物餵食、能力值刷新與互動展示。</p>
-            <a href="#" target="_blank">Watch Demo</a>
+          <article class="ntut-feature-panel" aria-labelledby="ntutFeatureTitle">
+            <div class="ntut-feature-copy">
+              <p class="eyebrow">VIRTUAL EXHIBITION</p>
+              <h3 id="ntutFeatureTitle">NTUT_IXD Virtual Exhibition</h3>
+              <p>畢業製作虛擬展場創作紀錄，整理展覽空間、作品展示動線與線上觀展體驗，和 MSV 系列分開作為獨立作品介紹。</p>
+            </div>
+            <div class="ntut-media-grid">
+              <a class="ntut-thumb" href="https://www.youtube.com/watch?v=8UopvzuZT6o" target="_blank" rel="noopener noreferrer" aria-label="Open NTUT IXD video on YouTube">
+                <img src="{{ '/assets/images/US_Preview/IXD1.jpg' | relative_url }}" alt="NTUT IXD virtual exhibition thumbnail">
+              </a>
+              <iframe src="https://www.youtube.com/embed/8UopvzuZT6o" title="NTUT IXD virtual exhibition preview" loading="lazy" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="demo-section reveal-card" id="demos">
+        <div class="section-heading">
+          <p class="eyebrow">GAME DEMO SHOWCASE</p>
+          <h2>MSV Series VRChat Worlds / Demo Clips</h2>
+          <p class="section-note">
+            預設只顯示縮圖與標題。按下 Show More 後會開啟詳細視窗，之後可放系統說明、影片連結與 GIF 展示。
+          </p>
+        </div>
+
+        <div class="demo-grid demo-compact-grid">
+          <article class="demo-card compact-demo-card reveal-card" id="demo-maple-kitchen">
+            <button class="demo-preview image-preview demo-preview-button" type="button" data-demo-open="maple-kitchen" aria-label="Open Maple Idle Kitchen details">
+              <img src="{{ '/assets/images/demo-maple-idle-kitchen.jpg' | relative_url }}" alt="Maple Idle Kitchen preview">
+            </button>
+            <div class="demo-compact-body">
+              <h3>Maple Idle Kitchen</h3>
+              <button class="show-more-button" type="button" data-demo-open="maple-kitchen">Show More</button>
+            </div>
           </article>
 
-          <article class="demo-card">
-            <div class="demo-preview">Video</div>
-            <h3>Dungeon Prototype</h3>
-            <p>多人副本、戰鬥、關卡流程與觀戰鏡頭展示。</p>
-            <a href="#" target="_blank">Watch Demo</a>
+          <article class="demo-card compact-demo-card reveal-card">
+            <button class="demo-preview image-preview demo-preview-button" type="button" data-demo-open="cross-party" aria-label="Open Cross Party details">
+              <img src="{{ '/assets/images/demo-cross-party.jpg' | relative_url }}" alt="MapleStory in VRChat Cross Party preview">
+            </button>
+            <div class="demo-compact-body">
+              <h3>MapleStory in VRChat - Cross Party</h3>
+              <button class="show-more-button" type="button" data-demo-open="cross-party">Show More</button>
+            </div>
+          </article>
+
+          <article class="demo-card compact-demo-card reveal-card">
+            <button class="demo-preview image-preview demo-preview-button" type="button" data-demo-open="exploration" aria-label="Open Exploration details">
+              <img src="{{ '/assets/images/demo-exploration.jpg' | relative_url }}" alt="MapleStory in VRChat Exploration preview">
+            </button>
+            <div class="demo-compact-body">
+              <h3>MapleStory in VRChat Exploration</h3>
+              <button class="show-more-button" type="button" data-demo-open="exploration">Show More</button>
+            </div>
           </article>
         </div>
       </section>
     </section>
   </main>
 
-  <script src="/assets/js/main.js"></script>
+  <div class="demo-modal" data-demo-modal aria-hidden="true">
+    <div class="demo-modal-backdrop" data-demo-close></div>
+    <article class="demo-modal-panel" role="dialog" aria-modal="true" aria-labelledby="demoModalTitle">
+      <button class="modal-close-button" type="button" data-demo-close aria-label="Close demo detail">×</button>
+      <div class="modal-media" data-demo-modal-media></div>
+      <div class="modal-content">
+        <p class="eyebrow" data-demo-modal-kicker>GAME DEMO</p>
+        <h2 id="demoModalTitle" data-demo-modal-title>Maple Idle Kitchen</h2>
+        <p data-demo-modal-description></p>
+        <div class="modal-system-list" data-demo-modal-systems></div>
+        <div class="world-actions modal-actions" data-demo-modal-actions></div>
+      </div>
+    </article>
+  </div>
+
+  <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
 </body>
 </html>
