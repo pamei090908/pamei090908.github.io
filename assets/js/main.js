@@ -427,8 +427,8 @@ document.querySelectorAll("[data-featured-demo-open]").forEach((link) => {
     const demoId = link.dataset.featuredDemoOpen;
     const target = document.querySelector(link.getAttribute("href"));
 
-    target?.scrollIntoView({ behavior: "smooth", block: "center" });
-    window.setTimeout(() => openDemoModal(demoId, link), 420);
+    target?.scrollIntoView({ behavior: "auto", block: "center" });
+    window.setTimeout(() => openDemoModal(demoId, link), 120);
   });
 });
 

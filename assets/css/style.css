@@ -26,7 +26,7 @@ body.light-mode {
 }
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: auto;
 }
 
 body {
@@ -51,7 +51,7 @@ body {
     linear-gradient(135deg, #060817 0%, #10152f 54%, #050713 100%);
   opacity: 1;
   visibility: visible;
-  transition: opacity 0.72s ease, visibility 0.72s ease;
+  transition: opacity 0.34s ease, visibility 0.34s ease;
 }
 
 .loading-screen::before,
@@ -68,7 +68,7 @@ body {
     repeating-linear-gradient(0deg, rgba(255, 255, 255, 0.06) 0 1px, transparent 1px 9px);
   mix-blend-mode: screen;
   opacity: 0.38;
-  animation: loading-scan 1.8s linear infinite;
+  animation: none;
 }
 
 .loading-screen::after {
@@ -91,8 +91,8 @@ body {
   background-size: 42px 42px;
   transform: perspective(700px) rotateX(62deg) translateY(16%);
   transform-origin: bottom;
-  animation: loading-grid-drift 2.8s linear infinite;
-  opacity: 0.45;
+  animation: none;
+  opacity: 0.2;
 }
 
 .loading-card {
@@ -109,7 +109,7 @@ body {
     0 0 70px rgba(101, 217, 255, 0.22),
     0 0 90px rgba(255, 143, 216, 0.14),
     inset 0 1px 0 rgba(255, 255, 255, 0.12);
-  backdrop-filter: blur(20px);
+  backdrop-filter: blur(8px);
   text-align: left;
   animation: loading-card-enter 0.72s ease both;
 }
@@ -133,7 +133,7 @@ body {
   background:
     conic-gradient(from 0deg, var(--blue), var(--pink), var(--purple), var(--blue));
   box-shadow: 0 0 36px rgba(101, 217, 255, 0.32);
-  animation: loading-orbit 2.4s linear infinite;
+  animation: none;
   padding: 3px;
 }
 
@@ -275,7 +275,7 @@ body.is-loading {
 .demo-card {
   border: 1px solid var(--card-border);
   background: var(--card);
-  backdrop-filter: blur(18px);
+  backdrop-filter: none;
   border-radius: 28px;
   box-shadow: var(--shadow);
 }
@@ -560,12 +560,11 @@ body.light-mode .theme-icon-moon {
   object-fit: cover;
   display: block;
   filter: saturate(1.08) contrast(1.04);
-  transition: transform 0.45s ease, filter 0.45s ease;
+  transition: transform 0.22s ease;
 }
 
 .bio-image-card:hover img {
-  transform: scale(1.05);
-  filter: saturate(1.2) contrast(1.08);
+  transform: scale(1.025);
 }
 
 .bio-image-caption {
@@ -577,7 +576,7 @@ body.light-mode .theme-icon-moon {
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 18px;
   background: rgba(8, 11, 24, 0.66);
-  backdrop-filter: blur(14px);
+  backdrop-filter: blur(6px);
 }
 
 .bio-image-caption h3 {
@@ -692,7 +691,7 @@ body.light-mode .theme-icon-moon {
   pointer-events: none;
   position: absolute;
   inset: 0;
-  transition: opacity 0.45s ease, transform 0.45s ease;
+  transition: opacity 0.22s ease, transform 0.22s ease;
 }
 
 .panel-page.is-active {
@@ -748,7 +747,7 @@ body.light-mode .theme-icon-moon {
   height: 100%;
   display: block;
   object-fit: cover;
-  transition: opacity 0.32s ease, transform 0.45s ease, filter 0.45s ease;
+  transition: opacity 0.2s ease, transform 0.22s ease;
 }
 
 .tech-preview-button {
@@ -764,8 +763,7 @@ body.light-mode .theme-icon-moon {
 }
 
 .tech-panel:hover .tech-preview img {
-  transform: scale(1.06);
-  filter: saturate(1.18) contrast(1.05);
+  transform: scale(1.025);
 }
 
 .tech-panel::before {
@@ -1077,12 +1075,11 @@ body.light-mode .theme-icon-moon {
   height: 100%;
   display: block;
   object-fit: cover;
-  transition: transform 0.45s ease, filter 0.45s ease;
+  transition: transform 0.22s ease;
 }
 
 .ntut-thumb:hover img {
-  transform: scale(1.05);
-  filter: saturate(1.12) contrast(1.05);
+  transform: scale(1.025);
 }
 
 .ntut-media-grid iframe {
@@ -1143,6 +1140,66 @@ body.light-mode .theme-icon-moon {
   border: 0;
   cursor: pointer;
   text-align: inherit;
+  position: relative;
+  display: block;
+  isolation: isolate;
+}
+
+
+.demo-preview-button::before {
+  content: "";
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  z-index: 3;
+  width: 42px;
+  height: 42px;
+  border: 1px solid rgba(255, 255, 255, 0.34);
+  border-radius: 999px;
+  background:
+    rgba(8, 11, 24, 0.72)
+    url("data:image/svg+xml,%3Csvg%20xmlns='http://www.w3.org/2000/svg'%20width='28'%20height='28'%20viewBox='0%200%2024%2024'%20fill='none'%20stroke='%23ffffff'%20stroke-width='2.4'%20stroke-linecap='round'%20stroke-linejoin='round'%3E%3Cpath%20d='M10%2013a5%205%200%200%200%207.54.54l3-3a5%205%200%200%200-7.07-7.07l-1.72%201.71'/%3E%3Cpath%20d='M14%2011a5%205%200%200%200-7.54-.54l-3%203a5%205%200%200%200%207.07%207.07l1.71-1.71'/%3E%3C/svg%3E")
+    center / 23px 23px no-repeat;
+  box-shadow: 0 0 24px rgba(101, 217, 255, 0.28);
+  opacity: 0.96;
+  transition: transform 0.18s ease, background-color 0.18s ease, border-color 0.18s ease;
+}
+
+.demo-preview-button::after {
+  content: "Open details";
+  position: absolute;
+  left: 14px;
+  bottom: 14px;
+  z-index: 3;
+  padding: 7px 10px;
+  border: 1px solid rgba(101, 217, 255, 0.34);
+  border-radius: 999px;
+  background: rgba(8, 11, 24, 0.72);
+  color: #f7f8ff;
+  font-size: 12px;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  box-shadow: 0 0 20px rgba(255, 143, 216, 0.16);
+  transition: transform 0.18s ease, border-color 0.18s ease, background 0.18s ease;
+}
+
+.demo-preview-button:hover::before,
+.demo-preview-button:focus-visible::before {
+  transform: translateY(-2px) scale(1.04);
+  border-color: rgba(255, 143, 216, 0.72);
+  background-color: rgba(255, 143, 216, 0.22);
+}
+
+.demo-preview-button:hover::after,
+.demo-preview-button:focus-visible::after {
+  transform: translateY(-2px);
+  border-color: rgba(255, 143, 216, 0.72);
+  background: rgba(255, 143, 216, 0.2);
+}
+
+.show-more-button::after {
+  content: " ↗";
+  color: var(--blue);
 }
 
 .demo-preview-button:focus-visible {
@@ -1162,15 +1219,14 @@ body.light-mode .theme-icon-moon {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transition: transform 0.45s ease, filter 0.45s ease;
+  transition: transform 0.22s ease;
 }
 
 .world-card:hover .image-preview img,
 .compact-demo-card:hover .image-preview img,
 .demo-preview-button:hover img,
 .demo-preview-button:focus-visible img {
-  transform: scale(1.06);
-  filter: saturate(1.15) contrast(1.08);
+  transform: scale(1.025);
 }
 
 .world-card-body {
@@ -1529,7 +1585,7 @@ body.modal-lock {
 .reveal-card {
   opacity: 0;
   transform: translateY(18px);
-  transition: opacity 0.65s ease, transform 0.65s ease;
+  transition: opacity 0.28s ease, transform 0.28s ease;
 }
 
 .reveal-card.is-visible {
